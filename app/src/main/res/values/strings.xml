@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IntentWithDataAndUri</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="web">Web</string>
+    <string name="map">Map</string>
+    <string name="call">Call</string>
+</resources>
