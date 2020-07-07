@@ -1,27 +1,20 @@
 package ua.turskyi.intentwithdataanduri
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.main.*
 
+class MainActivity : AppCompatActivity(R.layout.main), View.OnClickListener {
 
-class MainActivity : Activity(), View.OnClickListener {
-    var btnWeb: Button? = null
-    var btnMap: Button? = null
-    var btnCall: Button? = null
     /** Called when the activity is first created.  */
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main)
-        btnWeb = findViewById<View>(R.id.btnWeb) as Button
-        btnMap = findViewById<View>(R.id.btnMap) as Button
-        btnCall = findViewById<View>(R.id.btnCall) as Button
-        btnWeb!!.setOnClickListener(this)
-        btnMap!!.setOnClickListener(this)
-        btnCall!!.setOnClickListener(this)
+        btnWeb.setOnClickListener(this)
+        btnMap.setOnClickListener(this)
+        btnCall.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
